@@ -3,7 +3,7 @@ import { ArtbookContent } from '../_index';
 const content: ArtbookContent = {
   slug: 'art-of-war',
   images: [
-    'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4',
+    'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4',
   ],
 };
 

@@ -17,9 +17,9 @@ const RAW_ARTBOOKS: Artbook[] = [
       'Visions of Light explores the interplay between natural illumination and atmospheric conditions. Elena Rostova spent three years traveling to remote locations to capture these fleeting moments, translating them into stunning watercolor and digital mixed media pieces. The exhibition is accompanied by a serene ambient track that reflects the stillness of her subjects.',
     category: 'Illustration',
     imageUrl:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4',
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/visions-of-light-cover.mp4',
     gallery: [
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4'
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/visions-of-light-cover.mp4'
     ],
     features: ['240 Pages', 'Matte Finish', 'Includes Artist Commentary'],
     audioTrack:
@@ -55,9 +55,9 @@ const RAW_ARTBOOKS: Artbook[] = [
       "Need for Speed is a stark, uncompromising look at brutalist architecture around the world. David Chen's high-contrast black and white photography strips away the noise of the city, leaving only the raw geometry of concrete and steel. The exhibition is paired with a deep, resonant drone track that echoes the imposing nature of the structures.",
     category: 'Photography',
     imageUrl:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260227_042027_c4b2f2ea-1c7c-4d6e-9e3d-81a78063703f.mp4',
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/R34.mp4',
     gallery: [
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260227_042027_c4b2f2ea-1c7c-4d6e-9e3d-81a78063703f.mp4'
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/R34.mp4'
     ],
     features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
     audioTrack:
@@ -74,9 +74,9 @@ const RAW_ARTBOOKS: Artbook[] = [
       "Silent Monoliths is a stark, uncompromising look at brutalist architecture around the world. David Chen's high-contrast black and white photography strips away the noise of the city, leaving only the raw geometry of concrete and steel. The exhibition is paired with a deep, resonant drone track that echoes the imposing nature of the structures.",
     category: 'Concept Art',
     imageUrl:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4',
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4',
     gallery: [
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4'
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4'
     ],
     features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
     audioTrack:
@@ -93,9 +93,9 @@ const RAW_ARTBOOKS: Artbook[] = [
       "Silent Monoliths is a stark, uncompromising look at brutalist architecture around the world. David Chen's high-contrast black and white photography strips away the noise of the city, leaving only the raw geometry of concrete and steel. The exhibition is paired with a deep, resonant drone track that echoes the imposing nature of the structures.",
     category: 'Concept Art',
     imageUrl:
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_151826_c7218672-6e92-402c-9e45-f1e0f454bdc4.mp4',
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4',
     gallery: [
-      'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_151826_c7218672-6e92-402c-9e45-f1e0f454bdc4.mp4'
+      'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4'
     ],
     features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
     audioTrack:

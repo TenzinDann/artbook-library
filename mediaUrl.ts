@@ -1,13 +1,13 @@
 const ABSOLUTE_URL_PATTERN = /^(https?:)?\/\//i;
 const SPECIAL_URI_PATTERN = /^(data:|blob:)/i;
 const VISIONS_OF_LIGHT_CLOUDFRONT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4';
+  'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/visions-of-light-cover.mp4';
 const NEED_FOR_SPEED_CLOUDFRONT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260227_042027_c4b2f2ea-1c7c-4d6e-9e3d-81a78063703f.mp4';
+  'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/R34.mp4';
 const ART_OF_WAR_CLOUDFRONT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4';
+  'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4';
 const ART_OF_ANIME_CLOUDFRONT_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260324_151826_c7218672-6e92-402c-9e45-f1e0f454bdc4.mp4';
+  'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4';
 
 const MEDIA_FALLBACKS: Record<string, string[]> = {
   [VISIONS_OF_LIGHT_CLOUDFRONT_URL]: ['/media/visions-of-light-cover.mp4'],
