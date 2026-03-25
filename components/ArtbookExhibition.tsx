@@ -7,6 +7,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Artbook } from '../types';
+import { getMediaCandidates } from '../mediaUrl';
 
 interface ArtbookExhibitionProps {
   artbook: Artbook;
@@ -45,14 +46,36 @@ const ArtbookExhibition: React.FC<ArtbookExhibitionProps> = ({ artbook, galleryH
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [galleryDirection, setGalleryDirection] = useState(0);
+  const [heroMediaIndex, setHeroMediaIndex] = useState(0);
+  const [galleryMediaIndex, setGalleryMediaIndex] = useState(0);
   const galleryItems = artbook.gallery ?? [];
   const hasGalleryPreview = galleryItems.length > 0;
   const currentGalleryItem = galleryItems[currentImageIndex] ?? '';
+  const heroMediaCandidates = getMediaCandidates(artbook.imageUrl);
+  const currentHeroMedia = heroMediaCandidates[heroMediaIndex] ?? '';
+  const currentGalleryCandidates = getMediaCandidates(currentGalleryItem);
+  const currentGalleryMedia = currentGalleryCandidates[galleryMediaIndex] ?? '';
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     videoRef.current?.play().catch(() => {});
   }, [artbook.id]);
+
+  useEffect(() => {
+    setHeroMediaIndex(0);
+  }, [artbook.id, artbook.imageUrl]);
+
+  useEffect(() => {
+    setGalleryMediaIndex(0);
+  }, [currentImageIndex, currentGalleryItem]);
+
+  const handleHeroMediaError = () => {
+    setHeroMediaIndex((prev) => (prev < heroMediaCandidates.length - 1 ? prev + 1 : prev));
+  };
+
+  const handleGalleryMediaError = () => {
+    setGalleryMediaIndex((prev) => (prev < currentGalleryCandidates.length - 1 ? prev + 1 : prev));
+  };
 
   const openGallery = () => {
     if (hasGalleryPreview) {
@@ -91,22 +114,24 @@ const ArtbookExhibition: React.FC<ArtbookExhibitionProps> = ({ artbook, galleryH
       >
           {/* Background Image */}
           <div className="absolute inset-0 z-0 w-full h-full pointer-events-none">
-            {isVideoUrl(artbook.imageUrl) ? (
+            {isVideoUrl(currentHeroMedia) ? (
               <video
                 ref={videoRef}
-                src={artbook.imageUrl}
+                src={currentHeroMedia}
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="auto"
+                onError={handleHeroMediaError}
                 className="absolute inset-0 z-0 w-full h-full min-w-full min-h-full object-cover object-center contrast-[0.8] brightness-[0.9] transform-gpu will-change-transform [backface-visibility:hidden]"
                 aria-label={artbook.title}
               />
             ) : (
               <img 
-                  src={artbook.imageUrl} 
+                  src={currentHeroMedia} 
                   alt={artbook.title} 
+                  onError={handleHeroMediaError}
                   className="absolute inset-0 z-0 w-full h-full object-cover object-center contrast-[0.8] brightness-[0.9] transform-gpu will-change-transform [backface-visibility:hidden]"
               />
             )}
@@ -260,22 +285,24 @@ const ArtbookExhibition: React.FC<ArtbookExhibitionProps> = ({ artbook, galleryH
                 transition={smoothTransition}
                 className="absolute w-full h-full flex items-center justify-center"
               >
-                {isVideoUrl(currentGalleryItem) ? (
+                {isVideoUrl(currentGalleryMedia) ? (
                   <video
-                    src={currentGalleryItem}
+                    src={currentGalleryMedia}
                     autoPlay
                     loop
                     muted
                     controls
                     playsInline
                     preload="metadata"
+                    onError={handleGalleryMediaError}
                     className="absolute inset-0 z-0 w-full h-full object-cover object-center shadow-2xl transform-gpu will-change-transform [backface-visibility:hidden]"
                     aria-label={`${artbook.title} - Video ${currentImageIndex + 1}`}
                   />
                 ) : (
                   <img
-                    src={currentGalleryItem}
+                    src={currentGalleryMedia}
                     alt={`${artbook.title} - Image ${currentImageIndex + 1}`}
+                    onError={handleGalleryMediaError}
                     className="max-w-[90vw] max-h-[90vh] object-contain shadow-2xl"
                   />
                 )}

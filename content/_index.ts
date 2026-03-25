@@ -1,3 +1,5 @@
+import { resolveMediaUrl } from '../mediaUrl';
+
 export interface ArtbookContent {
   slug: string;
   images: string[];
@@ -30,7 +32,9 @@ export const getContentBySlug = (slug: string): ArtbookContent | undefined => {
   if (!content) return undefined;
   return {
     ...content,
-    images: [...content.images].sort((a, b) => getFilename(a).localeCompare(getFilename(b))),
+    images: [...content.images]
+      .map(resolveMediaUrl)
+      .sort((a, b) => getFilename(a).localeCompare(getFilename(b))),
   };
 };
 

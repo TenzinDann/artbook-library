@@ -6,6 +6,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { Artbook } from '../types';
+import { getMediaCandidates } from '../mediaUrl';
 
 interface ArtbookCardProps {
   artbook: Artbook;
@@ -18,6 +19,9 @@ const ArtbookCard: React.FC<ArtbookCardProps> = ({ artbook, href }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [mediaIndex, setMediaIndex] = useState(0);
+  const mediaCandidates = getMediaCandidates(artbook.imageUrl);
+  const currentMedia = mediaCandidates[mediaIndex] ?? '';
 
   useEffect(() => {
     const el = containerRef.current;
@@ -45,25 +49,35 @@ const ArtbookCard: React.FC<ArtbookCardProps> = ({ artbook, href }) => {
     }
   }, [isVisible]);
 
+  useEffect(() => {
+    setMediaIndex(0);
+  }, [artbook.id, artbook.imageUrl]);
+
+  const handleMediaError = () => {
+    setMediaIndex((prev) => (prev < mediaCandidates.length - 1 ? prev + 1 : prev));
+  };
+
   return (
     <a href={href} className="group flex flex-col gap-6 cursor-pointer">
       <div ref={containerRef} className="relative w-full aspect-[4/5] overflow-hidden bg-[#EBE7DE]">
-        {isVideoUrl(artbook.imageUrl) ? (
+        {isVideoUrl(currentMedia) ? (
           <video
             ref={videoRef}
-            src={isVisible ? artbook.imageUrl : undefined}
+            src={isVisible ? currentMedia : undefined}
             loop
             muted
             playsInline
             preload="metadata"
+            onError={handleMediaError}
             className="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 sepia-[0.1]"
             aria-label={artbook.title}
           />
         ) : (
           <img
-            src={artbook.imageUrl}
+            src={currentMedia}
             alt={artbook.title}
             loading="lazy"
+            onError={handleMediaError}
             className="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 sepia-[0.1]"
           />
         )}
