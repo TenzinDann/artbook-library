@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Vite Frontend",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js"],
+      "port": 3000
+    },
+    {
+      "name": "Chat API Server",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server/chat-server.mjs"],
+      "port": 8787
+    }
+  ]
+}
