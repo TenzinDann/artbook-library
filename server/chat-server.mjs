@@ -536,6 +536,13 @@ const decodePathnameSafely = (rawPathname) => {
   }
 };
 
+const DIST_ROOT = path.resolve(DIST_DIR);
+
+const isPathInsideDirectory = (baseDir, targetPath) => {
+  const relative = path.relative(baseDir, targetPath);
+  return relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative));
+};
+
 const resolveFilePath = (urlPathname) => {
   const rawPathname = urlPathname.split('?')[0];
   const decodedPathname = decodePathnameSafely(rawPathname);
@@ -553,7 +560,7 @@ const resolveFilePath = (urlPathname) => {
   }
 
   const candidate = path.resolve(DIST_DIR, `.${requestedPath}`);
-  if (!candidate.startsWith(path.resolve(DIST_DIR))) {
+  if (!isPathInsideDirectory(DIST_ROOT, candidate)) {
     return null;
   }
 
