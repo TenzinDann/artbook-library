@@ -21,9 +21,6 @@ const RAW_ARTBOOKS: Artbook[] = [
     gallery: [
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/visions-of-light-cover.mp4'
     ],
-    features: ['240 Pages', 'Matte Finish', 'Includes Artist Commentary'],
-    audioTrack:
-      'https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=ambient-piano-amp-strings-10711.mp3',
     tagline: 'The Beauty of Nature'
   },
   {
@@ -40,9 +37,6 @@ const RAW_ARTBOOKS: Artbook[] = [
     gallery: [
       'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4'
     ],
-    features: ['312 Pages', 'Glossy Paper', 'Fold-out City Map'],
-    audioTrack:
-      'https://cdn.pixabay.com/download/audio/2022/10/18/audio_31c2730e64.mp3?filename=cyberpunk-2099-10701.mp3',
     tagline: 'Explore the Galaxy'
   },
   {
@@ -59,9 +53,6 @@ const RAW_ARTBOOKS: Artbook[] = [
     gallery: [
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/R34.mp4'
     ],
-    features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
-    audioTrack:
-      'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=dark-ambient-drone-10575.mp3',
     tagline: 'Need for Speed'
   },
   {
@@ -69,38 +60,32 @@ const RAW_ARTBOOKS: Artbook[] = [
     slug: 'art-of-war',
     title: 'Art of War',
     artist: 'David Chen',
-    description: 'Black and white photography of brutalist architecture.',
+    description: 'A powerful visual chronicle of conflict, strategy, and the human cost of war.',
     longDescription:
-      "Silent Monoliths is a stark, uncompromising look at brutalist architecture around the world. David Chen's high-contrast black and white photography strips away the noise of the city, leaving only the raw geometry of concrete and steel. The exhibition is paired with a deep, resonant drone track that echoes the imposing nature of the structures.",
+      "Art of War is a powerful visual chronicle exploring the aesthetics of conflict and strategy throughout history. David Chen's evocative concept art captures the tension between destruction and beauty, rendering battlefields, war machines, and the quiet moments between chaos. The exhibition is paired with a deep, resonant drone track that echoes the weight of its subject matter.",
     category: 'Concept Art',
     imageUrl:
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4',
     gallery: [
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4'
     ],
-    features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
-    audioTrack:
-      'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=dark-ambient-drone-10575.mp3',
-    tagline: 'Need for Speed'
+    tagline: 'The Art of Conflict'
   },
   {
     id: 'a5',
     slug: 'art-of-anime',
     title: 'Art of Anime',
     artist: 'David Chen',
-    description: 'Black and white photography of brutalist architecture.',
+    description: 'A vibrant celebration of anime art styles, character design, and storytelling.',
     longDescription:
-      "Silent Monoliths is a stark, uncompromising look at brutalist architecture around the world. David Chen's high-contrast black and white photography strips away the noise of the city, leaving only the raw geometry of concrete and steel. The exhibition is paired with a deep, resonant drone track that echoes the imposing nature of the structures.",
+      "Art of Anime is a vibrant celebration of Japanese animation artistry. David Chen's stunning collection showcases character designs, key animation frames, and background paintings that define the medium. From hand-drawn classics to modern digital techniques, this exhibition captures the soul of anime. The accompanying track immerses you in the warmth and wonder of these illustrated worlds.",
     category: 'Concept Art',
     imageUrl:
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4',
     gallery: [
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4'
     ],
-    features: ['180 Pages', 'Heavyweight Paper', 'Signed by Artist'],
-    audioTrack:
-      'https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=dark-ambient-drone-10575.mp3',
-    tagline: 'Need for Speed'
+    tagline: 'The Soul of Animation'
   }
 ];
 

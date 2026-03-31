@@ -6,14 +6,12 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { Artbook } from '../types';
-import { getMediaCandidates } from '../mediaUrl';
+import { getMediaCandidates, isVideoUrl } from '../mediaUrl';
 
 interface ArtbookCardProps {
   artbook: Artbook;
   href: string;
 }
-
-const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(?:[?#]|$)/i.test(url);
 
 const ArtbookCard: React.FC<ArtbookCardProps> = ({ artbook, href }) => {
   const containerRef = useRef<HTMLDivElement>(null);

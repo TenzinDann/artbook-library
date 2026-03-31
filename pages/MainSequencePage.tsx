@@ -11,14 +11,13 @@ import Footer from '../components/Footer';
 import ArtbookExhibition from '../components/ArtbookExhibition';
 import { ARTBOOKS } from '../data/artbooks';
 import { getArtbookPagePath } from '../sitePaths';
+import { isVideoUrl } from '../mediaUrl';
 
 const HOME_VIDEO_URL =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260228_065522_522e2295-ba22-457e-8fdb-fbcd68109c73.mp4';
 
 const imagePreloadCache = new Set<string>();
 const videoPreloadCache = new Map<string, HTMLVideoElement>();
-
-const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(?:[?#]|$)/i.test(url);
 
 const canAggressiveMediaPreload = (): boolean => {
   const networkInfo = (navigator as Navigator & {
@@ -77,8 +76,8 @@ const slideVariants = {
 };
 
 const smoothTransition = {
-  x: { type: 'tween', ease: [0.22, 1, 0.36, 1], duration: 1 },
-  opacity: { duration: 1, ease: [0.22, 1, 0.36, 1] }
+  x: { type: 'tween' as const, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], duration: 1 },
+  opacity: { duration: 1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }
 };
 
 const HOME_INDEX = -1;

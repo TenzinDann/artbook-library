@@ -13,7 +13,10 @@ export interface Artbook {
   category: 'Illustration' | 'Concept Art' | 'Photography';
   imageUrl: string;
   gallery?: string[];
-  features: string[];
-  audioTrack?: string; // URL to background music
   tagline?: string;
+}
+
+export interface ArtbookContent {
+  slug: string;
+  images: string[];
 }

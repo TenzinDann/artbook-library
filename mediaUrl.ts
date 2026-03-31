@@ -1,3 +1,5 @@
+export const isVideoUrl = (url: string): boolean => /\.(mp4|webm|ogg)(?:[?#]|$)/i.test(url);
+
 const ABSOLUTE_URL_PATTERN = /^(https?:)?\/\//i;
 const SPECIAL_URI_PATTERN = /^(data:|blob:)/i;
 const VISIONS_OF_LIGHT_CLOUDFRONT_URL =
@@ -8,12 +10,18 @@ const ART_OF_WAR_CLOUDFRONT_URL =
   'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4';
 const ART_OF_ANIME_CLOUDFRONT_URL =
   'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4';
+const NEON_DYSTOPIA_CLOUDFRONT_URL =
+  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4';
+const HOME_HERO_CLOUDFRONT_URL =
+  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260228_065522_522e2295-ba22-457e-8fdb-fbcd68109c73.mp4';
 
 const MEDIA_FALLBACKS: Record<string, string[]> = {
   [VISIONS_OF_LIGHT_CLOUDFRONT_URL]: ['/media/visions-of-light-cover.mp4'],
   [NEED_FOR_SPEED_CLOUDFRONT_URL]: ['/media/R34.mp4'],
   [ART_OF_WAR_CLOUDFRONT_URL]: ['/media/Art of War.mp4'],
   [ART_OF_ANIME_CLOUDFRONT_URL]: ['/media/Campfire.mp4'],
+  [NEON_DYSTOPIA_CLOUDFRONT_URL]: ['/media/neon-dystopia.mp4'],
+  [HOME_HERO_CLOUDFRONT_URL]: ['/media/home-hero.mp4'],
 };
 
 const normalizeBasePath = (value: string): string => {

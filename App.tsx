@@ -5,7 +5,7 @@
 
 import React, { Suspense, lazy } from 'react';
 
-export type PageType = 'main' | 'home' | 'gallery' | 'artbook' | 'about';
+export type PageType = 'main' | 'gallery' | 'artbook' | 'about';
 
 interface AppProps {
   pageType: PageType;

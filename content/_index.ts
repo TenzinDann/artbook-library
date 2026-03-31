@@ -1,9 +1,7 @@
 import { resolveMediaUrl } from '../mediaUrl';
+import type { ArtbookContent } from '../types';
 
-export interface ArtbookContent {
-  slug: string;
-  images: string[];
-}
+export type { ArtbookContent };
 
 import visionsOfLight from './visions-of-light/_index';
 import neonDystopia from './neon-dystopia/_index';

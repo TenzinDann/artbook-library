@@ -7,7 +7,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Artbook } from '../types';
-import { getMediaCandidates } from '../mediaUrl';
+import { getMediaCandidates, isVideoUrl } from '../mediaUrl';
 
 interface ArtbookExhibitionProps {
   artbook: Artbook;
@@ -36,11 +36,9 @@ const slideVariants = {
 };
 
 const smoothTransition = {
-  x: { type: "tween", ease: [0.22, 1, 0.36, 1], duration: 0.8 },
-  opacity: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+  x: { type: "tween" as const, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], duration: 0.8 },
+  opacity: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }
 };
-
-const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(?:[?#]|$)/i.test(url);
 
 const ArtbookExhibition: React.FC<ArtbookExhibitionProps> = ({ artbook, galleryHref, nextHref, prevHref, onNext, onPrev }) => {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);

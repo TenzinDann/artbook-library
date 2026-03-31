@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ArtbookContent } from '../content/_index';
-import { getMediaCandidates } from '../mediaUrl';
-
-const isVideoUrl = (url: string) => /\.(mp4|webm|ogg)(?:[?#]|$)/i.test(url);
+import type { ArtbookContent } from '../types';
+import { getMediaCandidates, isVideoUrl } from '../mediaUrl';
 
 interface ArtbookGallerySectionProps {
   content: ArtbookContent;

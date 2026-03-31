@@ -1,4 +1,4 @@
-import { ArtbookContent } from '../_index';
+import type { ArtbookContent } from '../../types';
 
 const content: ArtbookContent = {
   slug: 'neon-dystopia',
