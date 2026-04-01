@@ -58,11 +58,11 @@ const RAW_ARTBOOKS: Artbook[] = [
   {
     id: 'a6',
     slug: 'art-of-war',
-    title: 'Art of War',
+    title: 'Echos of Battle',
     artist: 'David Chen',
     description: 'A powerful visual chronicle of conflict, strategy, and the human cost of war.',
     longDescription:
-      "Art of War is a powerful visual chronicle exploring the aesthetics of conflict and strategy throughout history. David Chen's evocative concept art captures the tension between destruction and beauty, rendering battlefields, war machines, and the quiet moments between chaos. The exhibition is paired with a deep, resonant drone track that echoes the weight of its subject matter.",
+      "Echos of Battle is a powerful visual chronicle exploring the aesthetics of conflict and strategy throughout history. David Chen's evocative concept art captures the tension between destruction and beauty, rendering battlefields, war machines, and the quiet moments between chaos. The exhibition is paired with a deep, resonant drone track that echoes the weight of its subject matter.",
     category: 'Concept Art',
     imageUrl:
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Art%20of%20War.mp4',
@@ -74,11 +74,11 @@ const RAW_ARTBOOKS: Artbook[] = [
   {
     id: 'a5',
     slug: 'art-of-anime',
-    title: 'Art of Anime',
+    title: 'Animated Wonders',
     artist: 'David Chen',
     description: 'A vibrant celebration of anime art styles, character design, and storytelling.',
     longDescription:
-      "Art of Anime is a vibrant celebration of Japanese animation artistry. David Chen's stunning collection showcases character designs, key animation frames, and background paintings that define the medium. From hand-drawn classics to modern digital techniques, this exhibition captures the soul of anime. The accompanying track immerses you in the warmth and wonder of these illustrated worlds.",
+      "Animated Wonders is a vibrant celebration of Japanese animation artistry. David Chen's stunning collection showcases character designs, key animation frames, and background paintings that define the medium. From hand-drawn classics to modern digital techniques, this exhibition captures the soul of anime. The accompanying track immerses you in the warmth and wonder of these illustrated worlds.",
     category: 'Concept Art',
     imageUrl:
       'https://pub-404a20f41ee84d6a8e87c77f2be7452c.r2.dev/Campfire.mp4',
